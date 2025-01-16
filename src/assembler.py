@@ -29,7 +29,36 @@ INSTRUCTION_TABLE = {
     "IOF": {"opcode": "F040", "description": "Turn interrupt off"},
 }
 
+SYMBOL_TABLE = {}
+
+
+LC = 0
+
+
+def first_pass(assembly_code):
+    global LC
+    SYMBOL_TABLE = {}
+    LC = 0
+
+    lines = assembly_code.split("\n")
+    for line in lines:
+        line = line.strip().split()
+
+        if len(line) == 0:
+            continue
+
+        if line[0].endswith(",") and len(line[0]) <= 4:
+            SYMBOL_TABLE[line[0][:-1]] = LC
+        if line[0] == "ORG":
+            LC = int(line[1])
+        elif line[0] == "END":
+            break
+
+        LC += 1
+
+    return SYMBOL_TABLE
+
 
 def parse_assembly_code(assembly_code):
-    # Parse the assembly code and return a list of instructions
+    first_pass(assembly_code)
     return "Hello World"
