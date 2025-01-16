@@ -1,0 +1,15 @@
+ ORG 300
+ LDA M1         / Load first memory location
+ ADD M2         / Add second memory location
+ STA M3         / Store the result in M3
+ LDA M4         / Load another memory location
+ SUB M5         / Subtract a value
+ STA M6         / Store the result in M6
+ HLT            / Halt the computer
+ M1, DEC 100    / First memory location with value 100
+ M2, DEC 50     / Second memory location with value 50
+ M3, HEX 0      / Result of addition (initial value 0)
+ M4, DEC 30     / Value of M4
+ M5, DEC 20     / Value of M5
+ M6, HEX 0      / Result of subtraction (initial value 0)
+ END            / End of symbolic program

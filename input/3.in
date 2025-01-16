@@ -1,0 +1,9 @@
+ ORG 400
+ LDA A          / Load operand A
+ CMA            / Complement AC
+ INC            / Increment AC
+ STA B          / Store result in B
+ HLT            / Halt the computer
+ A, DEC 120     / Operand A with value 120
+ B, HEX 0       / Complement + increment result (initial value 0)
+ END            / End of symbolic program

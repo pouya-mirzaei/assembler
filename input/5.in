@@ -1,0 +1,10 @@
+ ORG 600
+ LDA NUM1       / Load operand NUM1
+ ADD NUM2       / Add operand NUM2
+ XYZ 700        / Invalid instruction
+ STA RESULT     / Store result
+ HLT            / Halt the computer
+ NUM1, DEC 5    / Operand NUM1 with value 5
+ NUM2, DEC 15   / Operand NUM2 with value 15
+ RESULT, HEX 0  / Result stored here (initial value 0)
+ END            / End of symbolic program

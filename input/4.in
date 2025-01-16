@@ -1,0 +1,7 @@
+ ORG 500
+ LDA COUNT      / Load counter into AC
+ ISZ COUNT      / Increment counter, skip next if zero
+ BUN START      / Unconditionally branch to START
+ HLT            / Halt the computer
+ COUNT, DEC 10  / Counter with initial value 10
+ END            / End of symbolic program

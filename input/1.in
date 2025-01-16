@@ -1,0 +1,9 @@
+ ORG 200
+ LDA X          / Load operand X into AC
+ ADD Y          / Add operand Y to AC
+ STA Z          / Store the result in location Z
+ HLT            / Halt the computer
+ X, DEC 45      / Operand X with value 45
+ Y, DEC 55      / Operand Y with value 55
+ Z, HEX 0       / Result stored here (initial value 0)
+ END            / End of symbolic program
