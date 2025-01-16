@@ -84,7 +84,9 @@ def second_pass(assembly_code, SYMBOL_TABLE):
         if len(line) == 0:
             continue
 
-        if line[0] in PSEUDO_INSTRUCTION_TABLE or line[1] in PSEUDO_INSTRUCTION_TABLE:
+        if line[0] in PSEUDO_INSTRUCTION_TABLE or (
+            len(line) > 1 and line[1] in PSEUDO_INSTRUCTION_TABLE
+        ):
             if line[0] == "ORG":
                 LC = int(line[1])
                 continue
@@ -121,7 +123,6 @@ def second_pass(assembly_code, SYMBOL_TABLE):
                     opcode[0] = "1"
                 address = f"{address:04b}"
                 address = address.zfill(12)
-                print(address)
                 word = f"{opcode}{address}"
 
                 rs = {"location": LC, "Content": word}
