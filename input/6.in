@@ -1,0 +1,9 @@
+ORG 100     / Start at location 100
+LDA A       / Load value of A
+ADD B       / Add B to accumulator
+STA SUM     / Store in SUM
+HLT         / Halt program
+A, DEC 5    / Define A with value 5
+B, DEC 3    / Define B with value 3
+SUM, DEC 0  / Define SUM, initial value 0
+END         / End program

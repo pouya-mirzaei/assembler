@@ -1,0 +1,8 @@
+ORG 200
+CLA         / Clear accumulator
+CMA         / Complement accumulator
+INC         / Increment accumulator
+STA NUM     / Store result
+HLT         / Halt
+NUM, DEC 0
+END
