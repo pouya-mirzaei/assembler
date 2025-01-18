@@ -81,7 +81,7 @@ The assembler generates binary machine code files with the same name as the inpu
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/basic-assembler.git
+   git clone https://github.com/pouya-mirzaei/assembler.git
    ```
 2. Navigate to the project directory:
    ```bash
